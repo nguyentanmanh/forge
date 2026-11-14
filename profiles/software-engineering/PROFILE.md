@@ -25,7 +25,15 @@ Chọn **tối đa một góc nhìn chính** theo nhiệm vụ; có thể tham k
 
 Nếu nhiệm vụ chỉ là chỉnh sửa nhỏ hoặc đọc code đơn giản, có thể chỉ dùng Profile mà không cần perspective.
 
-## 4. Chọn Skills theo task, không theo chức danh
+## 4. Lựa chọn công nghệ
+- Với project hiện hữu, mặc định giữ ngôn ngữ, framework, build tool và conventions đang dùng; source/config hiện tại là evidence.
+- Không thêm framework hoặc library khi standard library hay capability sẵn có đáp ứng đủ.
+- Chỉ đề xuất đổi stack khi có constraint cụ thể mà stack hiện tại không đáp ứng; nêu migration cost, compatibility, rollout và rollback.
+- Đánh giá theo business fit, correctness, maintainability, team capability, ecosystem maturity, security, performance, operability, total cost of ownership, license và vendor lock-in.
+- Với quyết định quan trọng, so sánh baseline đơn giản với tối đa hai phương án thay thế; xác minh support lifecycle và exit strategy.
+- Không chọn công nghệ chỉ vì mới, phổ biến hoặc AI quen sử dụng.
+
+## 5. Chọn Skills theo task, không theo chức danh
 - Phân tích hệ thống: `system-analysis`.
 - Thiết kế giải pháp: `solution-architecture`, đôi khi thêm `architecture-decision`.
 - Review kiến trúc: `architecture-review`.
@@ -36,19 +44,19 @@ Nếu nhiệm vụ chỉ là chỉnh sửa nhỏ hoặc đọc code đơn giản
 
 **Nguyên tắc:** Mỗi workflow có một Skill nguồn chuẩn trong `forge/skills/`. Không sao chép nội dung `SKILL.md` vào Profile hoặc Perspective.
 
-## 5. Knowledge
+## 6. Knowledge
 - Tham chiếu các nguyên tắc chung tại `forge/knowledge/engineering/` khi liên quan.
 - Đọc Project Context hiện tại theo registry và quyền truy cập. Không tự động đọc dự án/tổ chức khác.
 - Ưu tiên source thực tế và tài liệu đã xác minh; ghi nhận xung đột nếu source khác docs.
 
-## 6. Chất lượng đầu ra
+## 7. Chất lượng đầu ra
 - **Implementation:** scope, thay đổi, rủi ro, test, rollback khi cần.
 - **Design:** bối cảnh, phương án, NFR, trade-off, lỗi hệ thống và verification.
 - **Review:** phát hiện có bằng chứng, tác động, mức ưu tiên, cách sửa.
 - **Troubleshooting:** triệu chứng → giả thuyết → kiểm tra → bằng chứng → kết luận.
 - **Leadership:** mục tiêu, owner, phụ thuộc, milestone, quality gate, rủi ro.
 
-## 7. Điều chỉnh theo phong cách cá nhân
+## 8. Điều chỉnh theo phong cách cá nhân
 - Code review: findings phải có location, điều kiện kích hoạt và impact; không liệt kê preference như bug.
 - Architecture: luôn có baseline đơn giản; không đề xuất microservices trước khi đánh giá modular monolith.
 - Production: khi không có logs, metrics, config hoặc deployment evidence, ghi `chưa xác minh`.

@@ -10,12 +10,16 @@ Thiết kế, triển khai hoặc đánh giá API, xử lý nghiệp vụ backen
 - Schema migration, indexing, query plan, caching, khả năng khôi phục.
 - Authentication, authorization, secrets, audit, PII.
 - Metrics, logs, tracing, SLO, deploy và rollback.
+- Compatibility giữa language/runtime, framework, persistence, transaction model và deployment platform hiện tại.
+- Concurrency model, connection/resource management, serialization và failure behavior của technology được chọn.
+- Không chọn reactive, asynchronous hoặc distributed stack nếu workload, NFR và năng lực team không chứng minh nhu cầu.
 
 ## Các câu hỏi then chốt
 1. Dữ liệu nào là nguồn sự thật; ai sở hữu cập nhật?
 2. Khi request bị timeout nhưng downstream đã xử lý thì sao?
 3. Khi retry/duplicate/concurrent requests xảy ra, trạng thái có còn đúng?
 4. Làm thế nào kiểm thử và quan sát lỗi trong môi trường thực tế?
+5. Stack hiện tại thiếu capability nào, hay chỉ cần sử dụng đúng capability đã có?
 
 ## Skills phù hợp (chọn theo task)
 `api-design`, `database-design`, `integration-design`, `code-review`, `test-strategy`, `debugging`, `performance-review`, `security-review`.
